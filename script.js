@@ -8,12 +8,14 @@ let currentDisplay = display.innerHTML;
 
 valueBtns.forEach(btn => {
     btn.addEventListener('click', function () {
+        let btnText = display.innerHTML;
         if (btn.innerHTML == '.') {
-            if (currentDisplay.includes('.')){
+            if (btnText.indexOf('.') > -1) {
+                console.log(btn.innerHTML)
                 alert('Only one decimal allowed!')
             } else {
-                display.innerHTML = `${display.innerHTML}${btn.innerHTML}`;
-            }
+            display.innerHTML = `${display.innerHTML}${btn.innerHTML}`;
+            };
         } else {
             display.innerHTML = `${display.innerHTML}${btn.innerHTML}`;
         }
