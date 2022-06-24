@@ -13,6 +13,10 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background-color: #272725;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #fff,
+    0 0 82px #fff, 0 0 92px #fff, 0 0 102px #fff, 0 0 151px #fff;
 }
 
 #calcContainer {
@@ -25,7 +29,11 @@ body {
   border-radius: 2%;
   font-size: 20px;
   justify-content: center;
+  border: 1px solid white;
   align-items: center;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    0 0 42px #fff 0 0 82px #fff, 0 0 92px #fff, 0 0 102px #fff, 0 0 151px #fff;
 }
 
 .row {
@@ -33,20 +41,57 @@ body {
   height: 25%;
   display: flex;
   margin-bottom: 5px;
+  justify-content: space-between;
 }
 
 .btn {
   height: 100%;
-  width: 25%;
-  margin: 0px;
-  border: 1px solid black;
+  width: 24%;
   border-radius: none;
   cursor: pointer;
   border-radius: 5%;
   font-size: 20px;
+  background-color: #272725;
+  /* border: 1px solid white; */
+  color: #fff;
+
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 1px solid white;
 }
 
 .btn .middle {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.btn:hover {
+  box-shadow: 0 0 5px gold;
+  -webkit-box-shadow: 0 0 5px gold;
+  -moz-box-shadow: 0 0 5px gold;
+  border: 1px solid gold;
+  color: gold;
+  font-size: 22px;
+}
+
+#display:hover {
+  box-shadow: 0 0 5px gold;
+  -webkit-box-shadow: 0 0 5px gold;
+  -moz-box-shadow: 0 0 5px gold;
+  border: 1px solid gold;
+  color: gold;
+  font-size: 22px;
+}
+
+h1:hover {
+  color: gold;
+  font-size: 34px;
+  text-shadow: 0 0 7px gold, 0 0 10px gold, 0 0 21px gold, 0 0 42px gold,
+    0 0 82px gold, 0 0 92px gold, 0 0 102px gold, 0 0 151px gold;
 }
