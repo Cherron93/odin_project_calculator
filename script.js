@@ -3,6 +3,7 @@ const display = document.getElementById('display');
 const equalsBtn = document.getElementById('equalsBtn');
 const valueBtns = Array.from(document.getElementsByClassName('btn value'))
 const clearBtn = document.getElementById('clear');
+const backSpaceBtn = document.getElementById('backspace');
 
 let currentDisplay = display.innerHTML;
 
@@ -55,3 +56,8 @@ equalsBtn.addEventListener('click', function () {
 });
 
 clearBtn.addEventListener('click', ()  => display.innerHTML = '');
+
+backSpaceBtn.addEventListener('click', () => {
+    let displayText = display.innerHTML;
+    display.innerHTML = displayText.slice(0, -1)
+});
