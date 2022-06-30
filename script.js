@@ -48,15 +48,11 @@ operators.forEach(btn => {
 })
 
 
-
 function calculate () {
     const displayArray = display.innerHTML.split(" ")
-    console.log(displayArray)
     let currentValue = parseInt(displayArray[0]);
     for (let i = 1; i <= displayArray.length; i ++) {
         if (displayArray[i] == '+') {
-            console.log(currentValue);
-            console.log(displayArray[i + 1])
             currentValue = eval(`${currentValue} + ${displayArray[i + 1]}`);
         } else if (displayArray[i] == '-') {
             currentValue = eval(`${currentValue} - ${displayArray[i + 1]}`);
@@ -76,7 +72,7 @@ function calculate () {
     } else {
         display.innerHTML = currentValue.toFixed(2);
     };
-}
+};
 
 equalsBtn.addEventListener('click', () => calculate()); 
 
@@ -113,7 +109,7 @@ backSpaceBtn.addEventListener('click', () => {
     display.innerHTML = displayText.slice(0, -1)
 });
 
-document.addEventListener('keypress', (e) => {
+document.addEventListener('keydown', (e) => {
     if (e.key == 'Enter') {
         calculate();
     } else if (e.key == '0' ||e.key == '1' || e.key == '2' || e.key == '3' || e.key == '4' || e.key == '5' || e.key == '6' || e.key == '7' || e.key == '8' || e.key == '9' || e.key == '(' || e.key == ')' || e.key == '.') {
